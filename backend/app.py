@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import sqlite3
+import random
 
 app = FastAPI()
 app.add_middleware(
@@ -16,7 +18,14 @@ def read_root():
 
 @app.get("/get_word")
 def get_word():
-    return {"word": "adieu"}
+    conn = sqlite3.connect("words.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT word FROM words")
+    all_words = cursor.fetchall()
+    conn.close()
+
+    word = random.choice(all_words)[0]
+    return {"word" : word}
 
 @app.route("/valid_word")
 def is_valid(word):
