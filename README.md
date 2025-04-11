@@ -90,8 +90,3 @@ You can deploy the FastAPI backend to platforms like:
 - [Heroku](https://www.heroku.com/) or [Render](https://render.com/) for a traditional server.
 Refer to the respective platform’s documentation for deployment steps, ensuring the `words.db` and `five_letter_words.txt` are included or managed appropriately.
 
-## Contributing
-Feel free to fork this repository, make improvements, and submit pull requests. Contributions to enhance the Wordle game logic, UI, or API are welcome!
-
-## License
-[Add your license here, e.g., MIT, if applicable. Otherwise, state that the project is unlicensed or specify terms.]
