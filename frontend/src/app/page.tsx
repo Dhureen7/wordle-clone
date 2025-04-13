@@ -29,7 +29,7 @@ export default function Wordle() {
     }
 
     const fetchWord = async (): Promise<string> => {
-        const res = await fetch("http://localhost:8000/get_word");
+        const res = await fetch("https://wordle-server-x2rf.onrender.com/get_word");
         const data: { word: string } = await res.json();
         return data.word;
     }
