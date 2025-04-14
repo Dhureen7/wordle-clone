@@ -57,7 +57,6 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
      source venv/bin/activate
 4. Install dependencies:
    pip install -r requirements.txt
-   (Note: If `requirements.txt` is not present, generate it with `pip freeze > requirements.txt` after installing dependencies like `fastapi`, `uvicorn`, and any database libraries.)
 5. Run the FastAPI server:
    uvicorn app:app --reload
 6. The backend will be available at [http://localhost:8000](http://localhost:8000). The frontend can fetch word data from defined API endpoints (e.g., `/words`).
